@@ -1,6 +1,6 @@
 {
-    "name": "@pd-api/client",
-    "description": "@pd-api/client client",
+    "name": "pd-api",
+    "description": "PlantDemand typescript API client",
     "version": "0.0.1",
     "scripts": {
         "build": "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
