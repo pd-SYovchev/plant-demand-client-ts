@@ -1,5 +1,5 @@
 {
-    "name": "pd-api",
+    "name": "pd-ts-client",
     "description": "PlantDemand typescript API client",
     "version": "0.0.1",
     "scripts": {
