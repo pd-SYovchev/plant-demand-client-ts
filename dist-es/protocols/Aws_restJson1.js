@@ -806,6 +806,22 @@ export const se_CreatePlantCommand = async (input, context) => {
         body,
     });
 };
+export const se_GetPlantByIdCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
+    const headers = {};
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}";
+    resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
+    let body;
+    return new __HttpRequest({
+        protocol,
+        hostname,
+        port,
+        method: "GET",
+        headers,
+        path: resolvedPath,
+        body,
+    });
+};
 export const se_GetPlantsListCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
@@ -2000,6 +2016,46 @@ export const de_CreatePlantCommand = async (output, context) => {
     return contents;
 };
 const de_CreatePlantCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseErrorBody(output.body, context)
+    };
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const parsedBody = parsedOutput.body;
+    return throwDefaultError({
+        output,
+        parsedBody,
+        errorCode
+    });
+};
+export const de_GetPlantByIdCommand = async (output, context) => {
+    if (output.statusCode !== 200 && output.statusCode >= 300) {
+        return de_GetPlantByIdCommandError(output, context);
+    }
+    const contents = map({
+        $metadata: deserializeMetadata(output),
+    });
+    const data = __expectNonNull((__expectObject(await parseBody(output.body, context))), "body");
+    const doc = take(data, {
+        'address': __expectString,
+        'business': __expectInt32,
+        'customer_name': __expectString,
+        'id': __expectInt32,
+        'max_capacity': __expectInt32,
+        'name': __expectString,
+        'night_shift_from': __expectString,
+        'night_shift_to': __expectString,
+        'owner': __expectInt32,
+        'picture': __expectString,
+        'plant_type': __expectString,
+        'removed': _json,
+        'show_produced_materials': __expectBoolean,
+        'source_plant': __expectInt32,
+    });
+    Object.assign(contents, doc);
+    return contents;
+};
+const de_GetPlantByIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context)

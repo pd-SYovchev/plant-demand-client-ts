@@ -53,8 +53,8 @@ export interface UpdateOrderCommandOutput extends Order, __MetadataBearer {}
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdateOrderCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdateOrderCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdateOrderCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdateOrderCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdateOrderInput
  *   plantId: "STRING_VALUE", // required

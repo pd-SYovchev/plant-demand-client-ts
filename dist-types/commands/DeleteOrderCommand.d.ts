@@ -26,8 +26,8 @@ export interface DeleteOrderCommandOutput extends __MetadataBearer {
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, DeleteOrderCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, DeleteOrderCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, DeleteOrderCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, DeleteOrderCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // DeleteOrderInput
  *   plantId: "STRING_VALUE", // required

@@ -6,12 +6,12 @@ import {
 } from "../PlantDemandServiceClient";
 import { getHttpApiKeyAuthPlugin } from "../middleware/HttpApiKeyAuth";
 import {
-  GetOrderFieldsInput,
-  GetOrderFieldsOutput,
+  GetPlantByIdInput,
+  Plant,
 } from "../models/models_0";
 import {
-  de_GetOrderFieldsCommand,
-  se_GetOrderFieldsCommand,
+  de_GetPlantByIdCommand,
+  se_GetPlantByIdCommand,
 } from "../protocols/Aws_restJson1";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import {
@@ -37,15 +37,15 @@ export { __MetadataBearer, $Command };
 /**
  * @public
  *
- * The input for {@link GetOrderFieldsCommand}.
+ * The input for {@link GetPlantByIdCommand}.
  */
-export interface GetOrderFieldsCommandInput extends GetOrderFieldsInput {}
+export interface GetPlantByIdCommandInput extends GetPlantByIdInput {}
 /**
  * @public
  *
- * The output of {@link GetOrderFieldsCommand}.
+ * The output of {@link GetPlantByIdCommand}.
  */
-export interface GetOrderFieldsCommandOutput extends GetOrderFieldsOutput, __MetadataBearer {}
+export interface GetPlantByIdCommandOutput extends Plant, __MetadataBearer {}
 
 /**
  * @public
@@ -53,47 +53,51 @@ export interface GetOrderFieldsCommandOutput extends GetOrderFieldsOutput, __Met
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetOrderFieldsCommand } from "pd-ts-client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetOrderFieldsCommand } = require("pd-ts-client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetPlantByIdCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetPlantByIdCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
- * const input = { // GetOrderFieldsInput
+ * const input = { // GetPlantByIdInput
  *   plantId: "STRING_VALUE", // required
  * };
- * const command = new GetOrderFieldsCommand(input);
+ * const command = new GetPlantByIdCommand(input);
  * const response = await client.send(command);
- * // { // GetOrderFieldsOutput
- * //   data: [ // OrderFieldList // required
- * //     { // OrderField
- * //       id: Number("int"), // required
- * //       name: "STRING_VALUE", // required
- * //       field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date", // required
- * //       plant: Number("int"), // required
- * //       is_required: true || false, // required
- * //       visible_to_customer: true || false, // required
- * //     },
- * //   ],
+ * // { // Plant
+ * //   id: Number("int"),
+ * //   name: "STRING_VALUE",
+ * //   address: "STRING_VALUE",
+ * //   picture: "STRING_VALUE",
+ * //   max_capacity: Number("int"),
+ * //   plant_type: "Mix" || "Aggregate" || "PavingSchedule" || "Customer",
+ * //   night_shift_from: "STRING_VALUE",
+ * //   night_shift_to: "STRING_VALUE",
+ * //   business: Number("int"),
+ * //   owner: Number("int"),
+ * //   removed: {},
+ * //   source_plant: Number("int"),
+ * //   customer_name: "STRING_VALUE",
+ * //   show_produced_materials: true || false,
  * // };
  *
  * ```
  *
- * @param GetOrderFieldsCommandInput - {@link GetOrderFieldsCommandInput}
- * @returns {@link GetOrderFieldsCommandOutput}
- * @see {@link GetOrderFieldsCommandInput} for command's `input` shape.
- * @see {@link GetOrderFieldsCommandOutput} for command's `response` shape.
+ * @param GetPlantByIdCommandInput - {@link GetPlantByIdCommandInput}
+ * @returns {@link GetPlantByIdCommandOutput}
+ * @see {@link GetPlantByIdCommandInput} for command's `input` shape.
+ * @see {@link GetPlantByIdCommandOutput} for command's `response` shape.
  * @see {@link PlantDemandServiceClientResolvedConfig | config} for PlantDemandServiceClient's `config` shape.
  *
  * @throws {@link PlantDemandServiceServiceException}
  * <p>Base exception class for all service exceptions from PlantDemandService service.</p>
  *
  */
-export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, GetOrderFieldsCommandOutput, PlantDemandServiceClientResolvedConfig> {
+export class GetPlantByIdCommand extends $Command<GetPlantByIdCommandInput, GetPlantByIdCommandOutput, PlantDemandServiceClientResolvedConfig> {
   // Start section: command_properties
   // End section: command_properties
 
   /**
    * @public
    */
-  constructor(readonly input: GetOrderFieldsCommandInput) {
+  constructor(readonly input: GetPlantByIdCommandInput) {
     // Start section: command_constructor
     super();
     // End section: command_constructor
@@ -106,7 +110,7 @@ export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, 
     clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
     configuration: PlantDemandServiceClientResolvedConfig,
     options?: __HttpHandlerOptions
-  ): Handler<GetOrderFieldsCommandInput, GetOrderFieldsCommandOutput> {
+  ): Handler<GetPlantByIdCommandInput, GetPlantByIdCommandOutput> {
     this.middlewareStack.use(getSerdePlugin(configuration, this.serialize, this.deserialize));
     this.middlewareStack.use(getHttpApiKeyAuthPlugin(configuration, { scheme: 'JWT', in: 'header', name: 'Authorization'}));
 
@@ -114,7 +118,7 @@ export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, 
 
     const { logger } = configuration;
     const clientName = "PlantDemandServiceClient";
-    const commandName = "GetOrderFieldsCommand";
+    const commandName = "GetPlantByIdCommand";
     const handlerExecutionContext: HandlerExecutionContext = {
       logger,
       clientName,
@@ -125,7 +129,7 @@ export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, 
         (_: any) => _,
       [SMITHY_CONTEXT_KEY]: {
         service: "PlantDemandService",
-        operation: "GetOrderFields",
+        operation: "GetPlantById",
       },
     }
     const { requestHandler } = configuration;
@@ -140,10 +144,10 @@ export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, 
    * @internal
    */
   private serialize(
-    input: GetOrderFieldsCommandInput,
+    input: GetPlantByIdCommandInput,
     context: __SerdeContext
   ): Promise<__HttpRequest> {
-    return se_GetOrderFieldsCommand(input, context);
+    return se_GetPlantByIdCommand(input, context);
   }
 
   /**
@@ -152,8 +156,8 @@ export class GetOrderFieldsCommand extends $Command<GetOrderFieldsCommandInput, 
   private deserialize(
     output: __HttpResponse,
     context: __SerdeContext
-  ): Promise<GetOrderFieldsCommandOutput> {
-    return de_GetOrderFieldsCommand(output, context);
+  ): Promise<GetPlantByIdCommandOutput> {
+    return de_GetPlantByIdCommand(output, context);
   }
 
   // Start section: command_body_extra

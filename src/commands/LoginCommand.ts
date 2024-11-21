@@ -53,8 +53,8 @@ export interface LoginCommandOutput extends LoginOutput, __MetadataBearer {}
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, LoginCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, LoginCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, LoginCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, LoginCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // LoginInput
  *   username: "STRING_VALUE", // required

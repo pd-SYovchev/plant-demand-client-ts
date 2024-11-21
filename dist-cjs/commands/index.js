@@ -38,6 +38,7 @@ tslib_1.__exportStar(require("./DeleteOrderCommand"), exports);
 tslib_1.__exportStar(require("./GetOrderByIdCommand"), exports);
 tslib_1.__exportStar(require("./UpdateOrderCommand"), exports);
 tslib_1.__exportStar(require("./CreatePlantCommand"), exports);
+tslib_1.__exportStar(require("./GetPlantByIdCommand"), exports);
 tslib_1.__exportStar(require("./GetPlantsListCommand"), exports);
 tslib_1.__exportStar(require("./GetPlantSubscribersCommand"), exports);
 tslib_1.__exportStar(require("./UpdatePlantCommand"), exports);

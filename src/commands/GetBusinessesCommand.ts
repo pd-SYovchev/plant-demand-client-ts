@@ -50,8 +50,8 @@ export interface GetBusinessesCommandOutput extends GetBusinessesOutput, __Metad
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetBusinessesCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetBusinessesCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetBusinessesCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetBusinessesCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = {};
  * const command = new GetBusinessesCommand(input);

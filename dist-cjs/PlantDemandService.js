@@ -23,6 +23,7 @@ const GetMixDesignsCommand_1 = require("./commands/GetMixDesignsCommand");
 const GetOrderByIdCommand_1 = require("./commands/GetOrderByIdCommand");
 const GetOrderDateFieldsCommand_1 = require("./commands/GetOrderDateFieldsCommand");
 const GetOrderFieldsCommand_1 = require("./commands/GetOrderFieldsCommand");
+const GetPlantByIdCommand_1 = require("./commands/GetPlantByIdCommand");
 const GetPlantCustomerByIdCommand_1 = require("./commands/GetPlantCustomerByIdCommand");
 const GetPlantCustomersCommand_1 = require("./commands/GetPlantCustomersCommand");
 const GetPlantMaterialByIdCommand_1 = require("./commands/GetPlantMaterialByIdCommand");
@@ -81,6 +82,7 @@ const commands = {
     GetOrderByIdCommand: GetOrderByIdCommand_1.GetOrderByIdCommand,
     UpdateOrderCommand: UpdateOrderCommand_1.UpdateOrderCommand,
     CreatePlantCommand: CreatePlantCommand_1.CreatePlantCommand,
+    GetPlantByIdCommand: GetPlantByIdCommand_1.GetPlantByIdCommand,
     GetPlantsListCommand: GetPlantsListCommand_1.GetPlantsListCommand,
     GetPlantSubscribersCommand: GetPlantSubscribersCommand_1.GetPlantSubscribersCommand,
     UpdatePlantCommand: UpdatePlantCommand_1.UpdatePlantCommand,

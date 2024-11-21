@@ -26,8 +26,8 @@ export interface ReplacePlantCustomerCommandOutput extends ReplacePlantCustomerO
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, ReplacePlantCustomerCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, ReplacePlantCustomerCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, ReplacePlantCustomerCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, ReplacePlantCustomerCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // ReplacePlantCustomerInput
  *   plantId: "STRING_VALUE", // required

@@ -26,8 +26,8 @@ export interface UpdateMixDesignCommandOutput extends UpdateMixDesignPayload, __
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdateMixDesignCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdateMixDesignCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdateMixDesignCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdateMixDesignCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdateMixDesignInput
  *   plantId: "STRING_VALUE", // required

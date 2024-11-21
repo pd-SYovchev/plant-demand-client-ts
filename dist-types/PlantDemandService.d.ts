@@ -20,6 +20,7 @@ import { GetMixDesignsCommandInput, GetMixDesignsCommandOutput } from "./command
 import { GetOrderByIdCommandInput, GetOrderByIdCommandOutput } from "./commands/GetOrderByIdCommand";
 import { GetOrderDateFieldsCommandInput, GetOrderDateFieldsCommandOutput } from "./commands/GetOrderDateFieldsCommand";
 import { GetOrderFieldsCommandInput, GetOrderFieldsCommandOutput } from "./commands/GetOrderFieldsCommand";
+import { GetPlantByIdCommandInput, GetPlantByIdCommandOutput } from "./commands/GetPlantByIdCommand";
 import { GetPlantCustomerByIdCommandInput, GetPlantCustomerByIdCommandOutput } from "./commands/GetPlantCustomerByIdCommand";
 import { GetPlantCustomersCommandInput, GetPlantCustomersCommandOutput } from "./commands/GetPlantCustomersCommand";
 import { GetPlantMaterialByIdCommandInput, GetPlantMaterialByIdCommandOutput } from "./commands/GetPlantMaterialByIdCommand";
@@ -263,6 +264,12 @@ export interface PlantDemandService {
     createPlant(args: CreatePlantCommandInput, options?: __HttpHandlerOptions): Promise<CreatePlantCommandOutput>;
     createPlant(args: CreatePlantCommandInput, cb: (err: any, data?: CreatePlantCommandOutput) => void): void;
     createPlant(args: CreatePlantCommandInput, options: __HttpHandlerOptions, cb: (err: any, data?: CreatePlantCommandOutput) => void): void;
+    /**
+     * @see {@link GetPlantByIdCommand}
+     */
+    getPlantById(args: GetPlantByIdCommandInput, options?: __HttpHandlerOptions): Promise<GetPlantByIdCommandOutput>;
+    getPlantById(args: GetPlantByIdCommandInput, cb: (err: any, data?: GetPlantByIdCommandOutput) => void): void;
+    getPlantById(args: GetPlantByIdCommandInput, options: __HttpHandlerOptions, cb: (err: any, data?: GetPlantByIdCommandOutput) => void): void;
     /**
      * @see {@link GetPlantsListCommand}
      */

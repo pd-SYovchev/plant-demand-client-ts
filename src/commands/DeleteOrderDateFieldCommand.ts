@@ -50,8 +50,8 @@ export interface DeleteOrderDateFieldCommandOutput extends __MetadataBearer {}
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, DeleteOrderDateFieldCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, DeleteOrderDateFieldCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, DeleteOrderDateFieldCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, DeleteOrderDateFieldCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // DeleteOrderDateFieldInput
  *   plantId: "STRING_VALUE", // required

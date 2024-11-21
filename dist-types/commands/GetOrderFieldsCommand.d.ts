@@ -26,8 +26,8 @@ export interface GetOrderFieldsCommandOutput extends GetOrderFieldsOutput, __Met
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetOrderFieldsCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetOrderFieldsCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetOrderFieldsCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetOrderFieldsCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // GetOrderFieldsInput
  *   plantId: "STRING_VALUE", // required

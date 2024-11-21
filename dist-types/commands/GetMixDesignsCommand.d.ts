@@ -26,8 +26,8 @@ export interface GetMixDesignsCommandOutput extends GetMixDesignsOutput, __Metad
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetMixDesignsCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetMixDesignsCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetMixDesignsCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetMixDesignsCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // GetMixDesignsInput
  *   plantId: "STRING_VALUE", // required

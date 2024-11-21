@@ -726,6 +726,12 @@ export interface Plant {
 /**
  * @public
  */
+export interface GetPlantByIdInput {
+    plantId: string | undefined;
+}
+/**
+ * @public
+ */
 export interface GetPlantsListInput {
     permissions?: string;
     show_inactive?: boolean;

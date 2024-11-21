@@ -26,8 +26,8 @@ export interface UpdatePlantCustomerCommandOutput extends Customer, __MetadataBe
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdatePlantCustomerCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdatePlantCustomerCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdatePlantCustomerCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdatePlantCustomerCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdatePlantCustomerInput
  *   plantId: "STRING_VALUE", // required

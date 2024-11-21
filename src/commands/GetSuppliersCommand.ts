@@ -50,8 +50,8 @@ export interface GetSuppliersCommandOutput extends GetSuppliersOutput, __Metadat
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetSuppliersCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetSuppliersCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetSuppliersCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetSuppliersCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = {};
  * const command = new GetSuppliersCommand(input);

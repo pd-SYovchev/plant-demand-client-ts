@@ -19,6 +19,7 @@ import { GetMixDesignsCommandInput, GetMixDesignsCommandOutput } from "../comman
 import { GetOrderByIdCommandInput, GetOrderByIdCommandOutput } from "../commands/GetOrderByIdCommand";
 import { GetOrderDateFieldsCommandInput, GetOrderDateFieldsCommandOutput } from "../commands/GetOrderDateFieldsCommand";
 import { GetOrderFieldsCommandInput, GetOrderFieldsCommandOutput } from "../commands/GetOrderFieldsCommand";
+import { GetPlantByIdCommandInput, GetPlantByIdCommandOutput } from "../commands/GetPlantByIdCommand";
 import { GetPlantCustomerByIdCommandInput, GetPlantCustomerByIdCommandOutput } from "../commands/GetPlantCustomerByIdCommand";
 import { GetPlantCustomersCommandInput, GetPlantCustomersCommandOutput } from "../commands/GetPlantCustomersCommand";
 import { GetPlantMaterialByIdCommandInput, GetPlantMaterialByIdCommandOutput } from "../commands/GetPlantMaterialByIdCommand";
@@ -189,6 +190,10 @@ export declare const se_UpdateOrderCommand: (input: UpdateOrderCommandInput, con
  */
 export declare const se_CreatePlantCommand: (input: CreatePlantCommandInput, context: __SerdeContext) => Promise<__HttpRequest>;
 /**
+ * serializeAws_restJson1GetPlantByIdCommand
+ */
+export declare const se_GetPlantByIdCommand: (input: GetPlantByIdCommandInput, context: __SerdeContext) => Promise<__HttpRequest>;
+/**
  * serializeAws_restJson1GetPlantsListCommand
  */
 export declare const se_GetPlantsListCommand: (input: GetPlantsListCommandInput, context: __SerdeContext) => Promise<__HttpRequest>;
@@ -348,6 +353,10 @@ export declare const de_UpdateOrderCommand: (output: __HttpResponse, context: __
  * deserializeAws_restJson1CreatePlantCommand
  */
 export declare const de_CreatePlantCommand: (output: __HttpResponse, context: __SerdeContext) => Promise<CreatePlantCommandOutput>;
+/**
+ * deserializeAws_restJson1GetPlantByIdCommand
+ */
+export declare const de_GetPlantByIdCommand: (output: __HttpResponse, context: __SerdeContext) => Promise<GetPlantByIdCommandOutput>;
 /**
  * deserializeAws_restJson1GetPlantsListCommand
  */

@@ -53,8 +53,8 @@ export interface RenameOrderFieldCommandOutput extends OrderField, __MetadataBea
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, RenameOrderFieldCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, RenameOrderFieldCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, RenameOrderFieldCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, RenameOrderFieldCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // RenameOrderFieldInput
  *   plantId: "STRING_VALUE", // required

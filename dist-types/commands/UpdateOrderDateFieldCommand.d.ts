@@ -26,8 +26,8 @@ export interface UpdateOrderDateFieldCommandOutput extends OrderField, __Metadat
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdateOrderDateFieldCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdateOrderDateFieldCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdateOrderDateFieldCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdateOrderDateFieldCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdateOrderDateFieldInput
  *   plantId: "STRING_VALUE", // required

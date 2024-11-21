@@ -109,6 +109,11 @@ import {
   GetOrderFieldsCommandOutput,
 } from "./commands/GetOrderFieldsCommand";
 import {
+  GetPlantByIdCommand,
+  GetPlantByIdCommandInput,
+  GetPlantByIdCommandOutput,
+} from "./commands/GetPlantByIdCommand";
+import {
   GetPlantCustomerByIdCommand,
   GetPlantCustomerByIdCommandInput,
   GetPlantCustomerByIdCommandOutput,
@@ -244,6 +249,7 @@ const commands = {
   GetOrderByIdCommand,
   UpdateOrderCommand,
   CreatePlantCommand,
+  GetPlantByIdCommand,
   GetPlantsListCommand,
   GetPlantSubscribersCommand,
   UpdatePlantCommand,
@@ -877,6 +883,23 @@ export interface PlantDemandService {
     args: CreatePlantCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreatePlantCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetPlantByIdCommand}
+   */
+  getPlantById(
+    args: GetPlantByIdCommandInput,
+    options?: __HttpHandlerOptions,
+  ): Promise<GetPlantByIdCommandOutput>;
+  getPlantById(
+    args: GetPlantByIdCommandInput,
+    cb: (err: any, data?: GetPlantByIdCommandOutput) => void
+  ): void;
+  getPlantById(
+    args: GetPlantByIdCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetPlantByIdCommandOutput) => void
   ): void;
 
   /**

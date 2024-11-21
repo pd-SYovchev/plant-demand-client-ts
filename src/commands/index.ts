@@ -36,6 +36,7 @@ export * from "./DeleteOrderCommand";
 export * from "./GetOrderByIdCommand";
 export * from "./UpdateOrderCommand";
 export * from "./CreatePlantCommand";
+export * from "./GetPlantByIdCommand";
 export * from "./GetPlantsListCommand";
 export * from "./GetPlantSubscribersCommand";
 export * from "./UpdatePlantCommand";

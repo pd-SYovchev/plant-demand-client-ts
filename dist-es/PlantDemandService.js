@@ -20,6 +20,7 @@ import { GetMixDesignsCommand, } from "./commands/GetMixDesignsCommand";
 import { GetOrderByIdCommand, } from "./commands/GetOrderByIdCommand";
 import { GetOrderDateFieldsCommand, } from "./commands/GetOrderDateFieldsCommand";
 import { GetOrderFieldsCommand, } from "./commands/GetOrderFieldsCommand";
+import { GetPlantByIdCommand, } from "./commands/GetPlantByIdCommand";
 import { GetPlantCustomerByIdCommand, } from "./commands/GetPlantCustomerByIdCommand";
 import { GetPlantCustomersCommand, } from "./commands/GetPlantCustomersCommand";
 import { GetPlantMaterialByIdCommand, } from "./commands/GetPlantMaterialByIdCommand";
@@ -78,6 +79,7 @@ const commands = {
     GetOrderByIdCommand,
     UpdateOrderCommand,
     CreatePlantCommand,
+    GetPlantByIdCommand,
     GetPlantsListCommand,
     GetPlantSubscribersCommand,
     UpdatePlantCommand,

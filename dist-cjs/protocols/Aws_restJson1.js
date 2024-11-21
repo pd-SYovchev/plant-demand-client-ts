@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.de_CreatePlantMaterialCommand = exports.de_UpdatePlantCustomerCommand = exports.de_ReplacePlantCustomerCommand = exports.de_GetPlantCustomersCommand = exports.de_GetPlantCustomerByIdCommand = exports.de_DeletePlantCustomerCommand = exports.de_CreatePlantCustomerCommand = exports.de_LoginCommand = exports.de_GetSuppliersCommand = exports.de_GetBusinessesCommand = exports.se_UpdatePlantCommand = exports.se_GetPlantSubscribersCommand = exports.se_GetPlantsListCommand = exports.se_CreatePlantCommand = exports.se_UpdateOrderCommand = exports.se_GetOrderByIdCommand = exports.se_DeleteOrderCommand = exports.se_CreateOrderCommand = exports.se_UpdateOrderFieldCommand = exports.se_UpdateOrderDateFieldCommand = exports.se_RenameOrderFieldCommand = exports.se_RenameOrderDateFieldCommand = exports.se_GetOrderFieldsCommand = exports.se_GetOrderDateFieldsCommand = exports.se_DeleteOrderFieldCommand = exports.se_DeleteOrderDateFieldCommand = exports.se_CreateOrderFieldCommand = exports.se_CreateOrderDateFieldCommand = exports.se_UpdateNoteCommand = exports.se_DeleteNoteCommand = exports.se_CreateNoteCommand = exports.se_UpdateMixDesignCommand = exports.se_GetMixDesignsCommand = exports.se_GetMixDesignByIdCommand = exports.se_DeleteMixDesignCommand = exports.se_CreateMixDesignCommand = exports.se_UpdatePlantMaterialCommand = exports.se_GetPlantMaterialsCommand = exports.se_GetPlantMaterialByIdCommand = exports.se_DeletePlantMaterialCommand = exports.se_CreatePlantMaterialCommand = exports.se_UpdatePlantCustomerCommand = exports.se_ReplacePlantCustomerCommand = exports.se_GetPlantCustomersCommand = exports.se_GetPlantCustomerByIdCommand = exports.se_DeletePlantCustomerCommand = exports.se_CreatePlantCustomerCommand = exports.se_LoginCommand = exports.se_GetSuppliersCommand = exports.se_GetBusinessesCommand = void 0;
-exports.de_UpdatePlantCommand = exports.de_GetPlantSubscribersCommand = exports.de_GetPlantsListCommand = exports.de_CreatePlantCommand = exports.de_UpdateOrderCommand = exports.de_GetOrderByIdCommand = exports.de_DeleteOrderCommand = exports.de_CreateOrderCommand = exports.de_UpdateOrderFieldCommand = exports.de_UpdateOrderDateFieldCommand = exports.de_RenameOrderFieldCommand = exports.de_RenameOrderDateFieldCommand = exports.de_GetOrderFieldsCommand = exports.de_GetOrderDateFieldsCommand = exports.de_DeleteOrderFieldCommand = exports.de_DeleteOrderDateFieldCommand = exports.de_CreateOrderFieldCommand = exports.de_CreateOrderDateFieldCommand = exports.de_UpdateNoteCommand = exports.de_DeleteNoteCommand = exports.de_CreateNoteCommand = exports.de_UpdateMixDesignCommand = exports.de_GetMixDesignsCommand = exports.de_GetMixDesignByIdCommand = exports.de_DeleteMixDesignCommand = exports.de_CreateMixDesignCommand = exports.de_UpdatePlantMaterialCommand = exports.de_GetPlantMaterialsCommand = exports.de_GetPlantMaterialByIdCommand = exports.de_DeletePlantMaterialCommand = void 0;
+exports.de_UpdatePlantCustomerCommand = exports.de_ReplacePlantCustomerCommand = exports.de_GetPlantCustomersCommand = exports.de_GetPlantCustomerByIdCommand = exports.de_DeletePlantCustomerCommand = exports.de_CreatePlantCustomerCommand = exports.de_LoginCommand = exports.de_GetSuppliersCommand = exports.de_GetBusinessesCommand = exports.se_UpdatePlantCommand = exports.se_GetPlantSubscribersCommand = exports.se_GetPlantsListCommand = exports.se_GetPlantByIdCommand = exports.se_CreatePlantCommand = exports.se_UpdateOrderCommand = exports.se_GetOrderByIdCommand = exports.se_DeleteOrderCommand = exports.se_CreateOrderCommand = exports.se_UpdateOrderFieldCommand = exports.se_UpdateOrderDateFieldCommand = exports.se_RenameOrderFieldCommand = exports.se_RenameOrderDateFieldCommand = exports.se_GetOrderFieldsCommand = exports.se_GetOrderDateFieldsCommand = exports.se_DeleteOrderFieldCommand = exports.se_DeleteOrderDateFieldCommand = exports.se_CreateOrderFieldCommand = exports.se_CreateOrderDateFieldCommand = exports.se_UpdateNoteCommand = exports.se_DeleteNoteCommand = exports.se_CreateNoteCommand = exports.se_UpdateMixDesignCommand = exports.se_GetMixDesignsCommand = exports.se_GetMixDesignByIdCommand = exports.se_DeleteMixDesignCommand = exports.se_CreateMixDesignCommand = exports.se_UpdatePlantMaterialCommand = exports.se_GetPlantMaterialsCommand = exports.se_GetPlantMaterialByIdCommand = exports.se_DeletePlantMaterialCommand = exports.se_CreatePlantMaterialCommand = exports.se_UpdatePlantCustomerCommand = exports.se_ReplacePlantCustomerCommand = exports.se_GetPlantCustomersCommand = exports.se_GetPlantCustomerByIdCommand = exports.se_DeletePlantCustomerCommand = exports.se_CreatePlantCustomerCommand = exports.se_LoginCommand = exports.se_GetSuppliersCommand = exports.se_GetBusinessesCommand = void 0;
+exports.de_UpdatePlantCommand = exports.de_GetPlantSubscribersCommand = exports.de_GetPlantsListCommand = exports.de_GetPlantByIdCommand = exports.de_CreatePlantCommand = exports.de_UpdateOrderCommand = exports.de_GetOrderByIdCommand = exports.de_DeleteOrderCommand = exports.de_CreateOrderCommand = exports.de_UpdateOrderFieldCommand = exports.de_UpdateOrderDateFieldCommand = exports.de_RenameOrderFieldCommand = exports.de_RenameOrderDateFieldCommand = exports.de_GetOrderFieldsCommand = exports.de_GetOrderDateFieldsCommand = exports.de_DeleteOrderFieldCommand = exports.de_DeleteOrderDateFieldCommand = exports.de_CreateOrderFieldCommand = exports.de_CreateOrderDateFieldCommand = exports.de_UpdateNoteCommand = exports.de_DeleteNoteCommand = exports.de_CreateNoteCommand = exports.de_UpdateMixDesignCommand = exports.de_GetMixDesignsCommand = exports.de_GetMixDesignByIdCommand = exports.de_DeleteMixDesignCommand = exports.de_CreateMixDesignCommand = exports.de_UpdatePlantMaterialCommand = exports.de_GetPlantMaterialsCommand = exports.de_GetPlantMaterialByIdCommand = exports.de_DeletePlantMaterialCommand = exports.de_CreatePlantMaterialCommand = void 0;
 const PlantDemandServiceServiceException_1 = require("../models/PlantDemandServiceServiceException");
 const protocol_http_1 = require("@smithy/protocol-http");
 const smithy_client_1 = require("@smithy/smithy-client");
@@ -847,6 +847,23 @@ const se_CreatePlantCommand = async (input, context) => {
     });
 };
 exports.se_CreatePlantCommand = se_CreatePlantCommand;
+const se_GetPlantByIdCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
+    const headers = {};
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}";
+    resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
+    let body;
+    return new protocol_http_1.HttpRequest({
+        protocol,
+        hostname,
+        port,
+        method: "GET",
+        headers,
+        path: resolvedPath,
+        body,
+    });
+};
+exports.se_GetPlantByIdCommand = se_GetPlantByIdCommand;
 const se_GetPlantsListCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
@@ -2081,6 +2098,47 @@ const de_CreatePlantCommand = async (output, context) => {
 };
 exports.de_CreatePlantCommand = de_CreatePlantCommand;
 const de_CreatePlantCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseErrorBody(output.body, context)
+    };
+    const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+    const parsedBody = parsedOutput.body;
+    return throwDefaultError({
+        output,
+        parsedBody,
+        errorCode
+    });
+};
+const de_GetPlantByIdCommand = async (output, context) => {
+    if (output.statusCode !== 200 && output.statusCode >= 300) {
+        return de_GetPlantByIdCommandError(output, context);
+    }
+    const contents = (0, smithy_client_1.map)({
+        $metadata: deserializeMetadata(output),
+    });
+    const data = (0, smithy_client_1.expectNonNull)(((0, smithy_client_1.expectObject)(await parseBody(output.body, context))), "body");
+    const doc = (0, smithy_client_1.take)(data, {
+        'address': smithy_client_1.expectString,
+        'business': smithy_client_1.expectInt32,
+        'customer_name': smithy_client_1.expectString,
+        'id': smithy_client_1.expectInt32,
+        'max_capacity': smithy_client_1.expectInt32,
+        'name': smithy_client_1.expectString,
+        'night_shift_from': smithy_client_1.expectString,
+        'night_shift_to': smithy_client_1.expectString,
+        'owner': smithy_client_1.expectInt32,
+        'picture': smithy_client_1.expectString,
+        'plant_type': smithy_client_1.expectString,
+        'removed': smithy_client_1._json,
+        'show_produced_materials': smithy_client_1.expectBoolean,
+        'source_plant': smithy_client_1.expectInt32,
+    });
+    Object.assign(contents, doc);
+    return contents;
+};
+exports.de_GetPlantByIdCommand = de_GetPlantByIdCommand;
+const de_GetPlantByIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
         body: await parseErrorBody(output.body, context)

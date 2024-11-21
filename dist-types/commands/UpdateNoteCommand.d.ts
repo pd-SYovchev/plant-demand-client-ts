@@ -26,8 +26,8 @@ export interface UpdateNoteCommandOutput extends __MetadataBearer {
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdateNoteCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdateNoteCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdateNoteCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdateNoteCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdateNoteInput
  *   plantId: "STRING_VALUE", // required

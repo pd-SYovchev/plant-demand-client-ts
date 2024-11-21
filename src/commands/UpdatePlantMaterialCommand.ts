@@ -53,8 +53,8 @@ export interface UpdatePlantMaterialCommandOutput extends Material, __MetadataBe
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, UpdatePlantMaterialCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, UpdatePlantMaterialCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, UpdatePlantMaterialCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, UpdatePlantMaterialCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // UpdatePlantMaterialInput
  *   plantId: "STRING_VALUE", // required

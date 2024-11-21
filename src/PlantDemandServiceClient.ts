@@ -84,6 +84,10 @@ import {
   GetOrderFieldsCommandOutput,
 } from "./commands/GetOrderFieldsCommand";
 import {
+  GetPlantByIdCommandInput,
+  GetPlantByIdCommandOutput,
+} from "./commands/GetPlantByIdCommand";
+import {
   GetPlantCustomerByIdCommandInput,
   GetPlantCustomerByIdCommandOutput,
 } from "./commands/GetPlantCustomerByIdCommand";
@@ -248,6 +252,7 @@ export type ServiceInputTypes =
   | GetOrderByIdCommandInput
   | GetOrderDateFieldsCommandInput
   | GetOrderFieldsCommandInput
+  | GetPlantByIdCommandInput
   | GetPlantCustomerByIdCommandInput
   | GetPlantCustomersCommandInput
   | GetPlantMaterialByIdCommandInput
@@ -293,6 +298,7 @@ export type ServiceOutputTypes =
   | GetOrderByIdCommandOutput
   | GetOrderDateFieldsCommandOutput
   | GetOrderFieldsCommandOutput
+  | GetPlantByIdCommandOutput
   | GetPlantCustomerByIdCommandOutput
   | GetPlantCustomersCommandOutput
   | GetPlantMaterialByIdCommandOutput

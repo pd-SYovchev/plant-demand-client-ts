@@ -84,6 +84,10 @@ import {
   GetOrderFieldsCommandOutput,
 } from "../commands/GetOrderFieldsCommand";
 import {
+  GetPlantByIdCommandInput,
+  GetPlantByIdCommandOutput,
+} from "../commands/GetPlantByIdCommand";
+import {
   GetPlantCustomerByIdCommandInput,
   GetPlantCustomerByIdCommandOutput,
 } from "../commands/GetPlantCustomerByIdCommand";
@@ -1279,6 +1283,30 @@ export const se_CreatePlantCommand = async(
     hostname,
     port,
     method: "POST",
+    headers,
+    path: resolvedPath,
+    body,
+  });
+}
+
+/**
+ * serializeAws_restJson1GetPlantByIdCommand
+ */
+export const se_GetPlantByIdCommand = async(
+  input: GetPlantByIdCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const {hostname, protocol = "https", port, path: basePath} = await context.endpoint();
+  const headers: any = {
+  };
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}";
+  resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
+  let body: any;
+  return new __HttpRequest({
+    protocol,
+    hostname,
+    port,
+    method: "GET",
     headers,
     path: resolvedPath,
     body,
@@ -3019,6 +3047,60 @@ const de_CreatePlantCommandError = async(
   output: __HttpResponse,
   context: __SerdeContext,
 ): Promise<CreatePlantCommandOutput> => {
+  const parsedOutput: any = {
+    ...output,
+    body: await parseErrorBody(output.body, context)
+  };
+  const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
+  const parsedBody = parsedOutput.body;
+  return throwDefaultError({
+    output,
+    parsedBody,
+    errorCode
+  })
+}
+
+/**
+ * deserializeAws_restJson1GetPlantByIdCommand
+ */
+export const de_GetPlantByIdCommand = async(
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetPlantByIdCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_GetPlantByIdCommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull((__expectObject(await parseBody(output.body, context))), "body");
+  const doc = take(data, {
+    'address': __expectString,
+    'business': __expectInt32,
+    'customer_name': __expectString,
+    'id': __expectInt32,
+    'max_capacity': __expectInt32,
+    'name': __expectString,
+    'night_shift_from': __expectString,
+    'night_shift_to': __expectString,
+    'owner': __expectInt32,
+    'picture': __expectString,
+    'plant_type': __expectString,
+    'removed': _json,
+    'show_produced_materials': __expectBoolean,
+    'source_plant': __expectInt32,
+  });
+  Object.assign(contents, doc);
+  return contents;
+}
+
+/**
+ * deserializeAws_restJson1GetPlantByIdCommandError
+ */
+const de_GetPlantByIdCommandError = async(
+  output: __HttpResponse,
+  context: __SerdeContext,
+): Promise<GetPlantByIdCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseErrorBody(output.body, context)

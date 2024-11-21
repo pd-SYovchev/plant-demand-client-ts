@@ -26,8 +26,8 @@ export interface GetPlantSubscribersCommandOutput extends GetPlantSubscribersOut
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
- * import { PlantDemandServiceClient, GetPlantSubscribersCommand } from "@pd-api/client"; // ES Modules import
- * // const { PlantDemandServiceClient, GetPlantSubscribersCommand } = require("@pd-api/client"); // CommonJS import
+ * import { PlantDemandServiceClient, GetPlantSubscribersCommand } from "pd-ts-client"; // ES Modules import
+ * // const { PlantDemandServiceClient, GetPlantSubscribersCommand } = require("pd-ts-client"); // CommonJS import
  * const client = new PlantDemandServiceClient(config);
  * const input = { // GetPlantSubscribersInput
  *   plantId: "STRING_VALUE", // required
