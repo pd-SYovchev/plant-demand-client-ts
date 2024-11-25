@@ -108,7 +108,7 @@ export class GetOrderDateFieldsCommand extends $Command<GetOrderDateFieldsComman
     options?: __HttpHandlerOptions
   ): Handler<GetOrderDateFieldsCommandInput, GetOrderDateFieldsCommandOutput> {
     this.middlewareStack.use(getSerdePlugin(configuration, this.serialize, this.deserialize));
-    this.middlewareStack.use(getHttpApiKeyAuthPlugin(configuration, { scheme: 'JWT', in: 'header', name: 'Authorization'}));
+    this.middlewareStack.use(getHttpApiKeyAuthPlugin(configuration, { in: 'header', name: 'Server-Api-Key'}));
 
     const stack = clientStack.concat(this.middlewareStack);
 

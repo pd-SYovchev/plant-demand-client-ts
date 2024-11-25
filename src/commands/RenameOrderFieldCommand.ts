@@ -108,7 +108,7 @@ export class RenameOrderFieldCommand extends $Command<RenameOrderFieldCommandInp
     options?: __HttpHandlerOptions
   ): Handler<RenameOrderFieldCommandInput, RenameOrderFieldCommandOutput> {
     this.middlewareStack.use(getSerdePlugin(configuration, this.serialize, this.deserialize));
-    this.middlewareStack.use(getHttpApiKeyAuthPlugin(configuration, { scheme: 'JWT', in: 'header', name: 'Authorization'}));
+    this.middlewareStack.use(getHttpApiKeyAuthPlugin(configuration, { in: 'header', name: 'Server-Api-Key'}));
 
     const stack = clientStack.concat(this.middlewareStack);
 
