@@ -347,6 +347,7 @@ export interface NoteDatePayload {
 export declare const NoteType: {
     readonly CUSTOM: "custom";
     readonly INSPECTION: "inspection";
+    readonly OVER_CAPACITY: "over_capacity";
     readonly PLANTCLOSURE: "plant_closure";
 };
 /**

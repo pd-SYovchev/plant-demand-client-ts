@@ -494,7 +494,7 @@ const se_UpdateNoteCommand = async (input, context) => {
         protocol,
         hostname,
         port,
-        method: "PUT",
+        method: "PATCH",
         headers,
         path: resolvedPath,
         body,

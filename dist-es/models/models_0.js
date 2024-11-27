@@ -1,6 +1,7 @@
 export const NoteType = {
     CUSTOM: "custom",
     INSPECTION: "inspection",
+    OVER_CAPACITY: "over_capacity",
     PLANTCLOSURE: "plant_closure",
 };
 export const OrderFieldsType = {

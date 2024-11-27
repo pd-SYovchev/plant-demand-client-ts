@@ -58,7 +58,7 @@ export interface UpdateNoteCommandOutput extends __MetadataBearer {}
  *   noteId: "STRING_VALUE", // required
  *   body: { // CreateUpdateNotePayload
  *     calendar_type: "STRING_VALUE", // required
- *     type: "plant_closure" || "inspection" || "custom", // required
+ *     type: "plant_closure" || "inspection" || "custom" || "over_capacity", // required
  *     description: "STRING_VALUE",
  *     title: "STRING_VALUE", // required
  *     dates: [ // CreateNotePayloadDates // required

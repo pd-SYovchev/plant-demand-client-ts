@@ -4,6 +4,7 @@ exports.PlantType = exports.OrderFieldsType = exports.NoteType = void 0;
 exports.NoteType = {
     CUSTOM: "custom",
     INSPECTION: "inspection",
+    OVER_CAPACITY: "over_capacity",
     PLANTCLOSURE: "plant_closure",
 };
 exports.OrderFieldsType = {

@@ -840,7 +840,7 @@ export const se_UpdateNoteCommand = async(
     protocol,
     hostname,
     port,
-    method: "PUT",
+    method: "PATCH",
     headers,
     path: resolvedPath,
     body,

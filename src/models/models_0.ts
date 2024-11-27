@@ -388,6 +388,7 @@ export interface NoteDatePayload {
 export const NoteType = {
   CUSTOM: "custom",
   INSPECTION: "inspection",
+  OVER_CAPACITY: "over_capacity",
   PLANTCLOSURE: "plant_closure",
 } as const
 /**
