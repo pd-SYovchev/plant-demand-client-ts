@@ -872,6 +872,7 @@ const se_GetPlantsListCommand = async (input, context) => {
         "data": [, "true"],
         "permissions": [, input.permissions],
         "show_inactive": [() => input.show_inactive !== void 0, () => (input.show_inactive.toString())],
+        "organization": [() => input.organization !== void 0, () => (input.organization.toString())],
     });
     let body;
     return new protocol_http_1.HttpRequest({

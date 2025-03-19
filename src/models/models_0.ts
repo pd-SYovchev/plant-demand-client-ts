@@ -818,6 +818,7 @@ export interface GetPlantByIdInput {
 export interface GetPlantsListInput {
   permissions?: string;
   show_inactive?: boolean;
+  organization?: number;
 }
 
 /**

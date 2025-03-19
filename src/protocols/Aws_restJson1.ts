@@ -1328,6 +1328,7 @@ export const se_GetPlantsListCommand = async(
     "data": [, "true"],
     "permissions": [,input.permissions!],
     "show_inactive": [() => input.show_inactive !== void 0, () => (input.show_inactive!.toString())],
+    "organization": [() => input.organization !== void 0, () => (input.organization!.toString())],
   });
   let body: any;
   return new __HttpRequest({

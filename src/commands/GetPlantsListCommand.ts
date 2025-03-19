@@ -59,6 +59,7 @@ export interface GetPlantsListCommandOutput extends GetPlantsListOutput, __Metad
  * const input = { // GetPlantsListInput
  *   permissions: "STRING_VALUE",
  *   show_inactive: true || false,
+ *   organization: Number("int"),
  * };
  * const command = new GetPlantsListCommand(input);
  * const response = await client.send(command);
