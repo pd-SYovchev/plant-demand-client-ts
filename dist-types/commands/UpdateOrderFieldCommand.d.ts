@@ -34,7 +34,7 @@ export interface UpdateOrderFieldCommandOutput extends OrderField, __MetadataBea
  *   orderFieldId: "STRING_VALUE", // required
  *   body: { // UpdateOrderFieldPayload
  *     name: "STRING_VALUE",
- *     field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date",
+ *     field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date" || "Hidden",
  *     is_required: true || false,
  *     visible_to_customer: true || false,
  *   },
@@ -44,7 +44,7 @@ export interface UpdateOrderFieldCommandOutput extends OrderField, __MetadataBea
  * // { // OrderField
  * //   id: Number("int"), // required
  * //   name: "STRING_VALUE", // required
- * //   field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date", // required
+ * //   field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date" || "Hidden", // required
  * //   plant: Number("int"), // required
  * //   is_required: true || false, // required
  * //   visible_to_customer: true || false, // required

@@ -858,7 +858,7 @@ export const se_CreateOrderDateFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/new";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/new";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   let body: any;
   if (input.body !== undefined) {
@@ -890,7 +890,7 @@ export const se_CreateOrderFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/new";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/new";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   let body: any;
   if (input.body !== undefined) {
@@ -921,7 +921,7 @@ export const se_DeleteOrderDateFieldCommand = async(
   const {hostname, protocol = "https", port, path: basePath} = await context.endpoint();
   const headers: any = {
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}/delete";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}/delete";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;
@@ -946,7 +946,7 @@ export const se_DeleteOrderFieldCommand = async(
   const {hostname, protocol = "https", port, path: basePath} = await context.endpoint();
   const headers: any = {
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}/delete";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}/delete";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;
@@ -971,7 +971,7 @@ export const se_GetOrderDateFieldsCommand = async(
   const {hostname, protocol = "https", port, path: basePath} = await context.endpoint();
   const headers: any = {
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_fields";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_fields";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   const query: any = map({
     "data": [, "true"],
@@ -1028,7 +1028,7 @@ export const se_RenameOrderDateFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}/rename";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}/rename";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;
@@ -1057,7 +1057,7 @@ export const se_RenameOrderFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}/rename";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}/rename";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;
@@ -1086,7 +1086,7 @@ export const se_UpdateOrderDateFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;
@@ -1119,7 +1119,7 @@ export const se_UpdateOrderFieldCommand = async(
   const headers: any = {
     'content-type': 'application/json',
   };
-  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}";
+  let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}";
   resolvedPath = __resolvedPath(resolvedPath, input, 'plantId', () => input.plantId!, '{plantId}', false)
   resolvedPath = __resolvedPath(resolvedPath, input, 'orderFieldId', () => input.orderFieldId!, '{orderFieldId}', false)
   let body: any;

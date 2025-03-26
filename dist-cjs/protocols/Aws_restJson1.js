@@ -506,7 +506,7 @@ const se_CreateOrderDateFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/new";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/new";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     let body;
     if (input.body !== undefined) {
@@ -532,7 +532,7 @@ const se_CreateOrderFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/new";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/new";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     let body;
     if (input.body !== undefined) {
@@ -556,7 +556,7 @@ exports.se_CreateOrderFieldCommand = se_CreateOrderFieldCommand;
 const se_DeleteOrderDateFieldCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}/delete";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}/delete";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;
@@ -574,7 +574,7 @@ exports.se_DeleteOrderDateFieldCommand = se_DeleteOrderDateFieldCommand;
 const se_DeleteOrderFieldCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}/delete";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}/delete";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;
@@ -592,7 +592,7 @@ exports.se_DeleteOrderFieldCommand = se_DeleteOrderFieldCommand;
 const se_GetOrderDateFieldsCommand = async (input, context) => {
     const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {};
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_fields";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_fields";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     const query = (0, smithy_client_1.map)({
         "data": [, "true"],
@@ -636,7 +636,7 @@ const se_RenameOrderDateFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}/rename";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}/rename";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;
@@ -659,7 +659,7 @@ const se_RenameOrderFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}/rename";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}/rename";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;
@@ -682,7 +682,7 @@ const se_UpdateOrderDateFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_date_field/{orderFieldId}";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_date_field/{orderFieldId}";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;
@@ -709,7 +709,7 @@ const se_UpdateOrderFieldCommand = async (input, context) => {
     const headers = {
         'content-type': 'application/json',
     };
-    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/plant/{plantId}/order_field/{orderFieldId}";
+    let resolvedPath = `${basePath?.endsWith('/') ? basePath.slice(0, -1) : (basePath || '')}` + "/api/plant/{plantId}/order_field/{orderFieldId}";
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'plantId', () => input.plantId, '{plantId}', false);
     resolvedPath = (0, smithy_client_1.resolvedPath)(resolvedPath, input, 'orderFieldId', () => input.orderFieldId, '{orderFieldId}', false);
     let body;

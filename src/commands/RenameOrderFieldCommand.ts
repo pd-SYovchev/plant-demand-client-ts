@@ -68,7 +68,7 @@ export interface RenameOrderFieldCommandOutput extends OrderField, __MetadataBea
  * // { // OrderField
  * //   id: Number("int"), // required
  * //   name: "STRING_VALUE", // required
- * //   field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date", // required
+ * //   field_type: "Text" || "TextArea" || "Checkbox" || "Time" || "Date" || "Hidden", // required
  * //   plant: Number("int"), // required
  * //   is_required: true || false, // required
  * //   visible_to_customer: true || false, // required

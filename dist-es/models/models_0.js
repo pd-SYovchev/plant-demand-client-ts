@@ -4,9 +4,10 @@ export const NoteType = {
     OVER_CAPACITY: "over_capacity",
     PLANTCLOSURE: "plant_closure",
 };
-export const OrderFieldsType = {
+export const OrderFieldType = {
     CHECKBOX: "Checkbox",
     DATE: "Date",
+    HIDDEN: "Hidden",
     TEXT: "Text",
     TEXTAREA: "TextArea",
     TIME: "Time",

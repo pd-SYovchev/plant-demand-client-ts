@@ -413,9 +413,10 @@ export interface UpdateNoteInput {
  * @public
  * @enum
  */
-export declare const OrderFieldsType: {
+export declare const OrderFieldType: {
     readonly CHECKBOX: "Checkbox";
     readonly DATE: "Date";
+    readonly HIDDEN: "Hidden";
     readonly TEXT: "Text";
     readonly TEXTAREA: "TextArea";
     readonly TIME: "Time";
@@ -423,13 +424,13 @@ export declare const OrderFieldsType: {
 /**
  * @public
  */
-export type OrderFieldsType = typeof OrderFieldsType[keyof typeof OrderFieldsType];
+export type OrderFieldType = typeof OrderFieldType[keyof typeof OrderFieldType];
 /**
  * @public
  */
 export interface CreateOrderFieldPayload {
     name: string | undefined;
-    field_type: OrderFieldsType | undefined;
+    field_type: OrderFieldType | undefined;
     is_required: boolean | undefined;
     visible_to_customer: boolean | undefined;
 }
@@ -446,7 +447,7 @@ export interface CreateOrderDateFieldInput {
 export interface OrderField {
     id: number | undefined;
     name: string | undefined;
-    field_type: OrderFieldsType | undefined;
+    field_type: OrderFieldType | undefined;
     plant: number | undefined;
     is_required: boolean | undefined;
     visible_to_customer: boolean | undefined;
@@ -523,7 +524,7 @@ export interface RenameOrderFieldInput {
  */
 export interface UpdateOrderFieldPayload {
     name?: string;
-    field_type?: OrderFieldsType;
+    field_type?: OrderFieldType;
     is_required?: boolean;
     visible_to_customer?: boolean;
 }
